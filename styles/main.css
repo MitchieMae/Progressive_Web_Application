@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*mobile first*/
+
+#mapCanvas{
+    height: 100%;
+    width: 100%;
+    background-color: #0000ff;
+}
+
+
+#dropDown{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: aqua;
+}
+
+#details{
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background-color: beige;
+}
