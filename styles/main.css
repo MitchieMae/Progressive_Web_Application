@@ -27,3 +27,31 @@ body{
     width: 100%;
     background-color: beige;
 }
+
+#detailsContainer{
+    width: 98%;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+#detailsContainer h1{
+    
+}
+
+#callButton{
+    bottom: 0;
+    background-color: greenyellow;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+#callButton p{
+    margin: auto;
+    height: auto;
+    width: auto;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}
