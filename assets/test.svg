@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- (c) ammap.com | SVG map of Philippines - High -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="472px" height="392px" viewBox="0 0 472 392" enable-background="new 0 0 472 392" xml:space="preserve">
 	<defs>
 		<style type="text/css">
 			.land

@@ -6,19 +6,27 @@ var mapCtx = mapCanvas.getContext("2d");
 mapCanvas.height = document.body.clientHeight;
 mapCanvas.width = document.body.clientWidth;
 
-var mapBg = new Image();
-mapBg.src = "assets/test.svg";
+var mapBg = document.getElementById("mapSVG");
 
 mapBg.onload = function(){
     mapCtx.drawImage(mapBg,0,0);
 }
 
 var mapTranslation = [0,0];
+var mapScale = [1,1];
 
 mapCanvas.addEventListener("mousemove",moveMap);
 mapCanvas.addEventListener("mousedown",mouseDown);
 mapCanvas.addEventListener("mouseup",mouseUp);
 //TODO touch events
+
+
+///mapcontrols
+var zoomInBtn = document.getElementById("mapCtr_zoom-in");
+var zoomOutBtn = document.getElementById("mapCtr_zoom-out");
+
+zoomInBtn.addEventListener("click",zoomIn);
+zoomOutBtn.addEventListener("click",zoomOut);
 
 var mousePressed = false;
 
@@ -53,9 +61,27 @@ function moveMap(event){
 function offsetMap(x_offset,y_offset){
     mapTranslation[0] += x_offset;
     mapTranslation[1] += y_offset;
+    draw();
+}
+
+function zoomIn(){
+    mapScale[0] += .5;
+    mapScale[1] += .5;
+    draw();
+}
+
+function zoomOut(){
+    mapScale[0] -= .5;
+    mapScale[1] -= .5;
+    draw();
+    console.log("zoomout");
+}
+
+function draw(){
     mapCtx.clearRect(0,0,mapCanvas.width,mapCanvas.height)
     mapCtx.save();
     mapCtx.translate(mapTranslation[0],mapTranslation[1]);
+    mapCtx.scale(mapScale[0],mapScale[1]);
     mapCtx.drawImage(mapBg,0,0);
     mapCtx.restore();
 }

@@ -10,6 +10,26 @@ body{
     width: 100%;
 }
 
+#misc{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#mapControl{
+    float: right;
+    bottom: 0;
+}
+
+#mapControl button{
+    margin: 1vh;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0px 2px 5px grey;
+}
+
 
 #dropDown_container{
     position: absolute;
@@ -27,6 +47,7 @@ body{
     border-radius: 1vh;
     text-align: center;
     transition: all .4s ease;
+    padding: 
 }
 
 #dropDown_container .dropped{
@@ -56,18 +77,20 @@ body{
     overflow: auto;
 }
 
-#dropDown_container .dropped textarea{
+#dropDown_container .dropped input{
     border-color: aqua;
     background-color: aqua;
 }
 
-#dropDown textarea{
-    margin: 1vh auto;
-    font-size: 1em;
+#dropDown input{
+    padding: 1vh;
+    margin: 1vh;
+    font-size: .5em;
     border: none;
     background-color: transparent;
     height: inherit;
     text-align: center;
+    width: 90%;
 }
 
 #dropDown_content ul{
@@ -78,11 +101,10 @@ body{
 }
 
 #details{
-    position: absolute;
-    bottom: 0;
-    height: 30vh;
+    height: 0vh;
     width: 100%;
-    background-color: beige;
+    background-color: #b65454;
+    overflow: hidden;
 }
 
 #detailsContainer{
