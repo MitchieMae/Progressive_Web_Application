@@ -1,0 +1,130 @@
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 1",
+	"Location":"Quirino Highway",
+	"Coordinates":"",
+	"Telephone Number":"424-2697"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 2",
+	"Location":"Camdas",
+	"Coordinates":"",
+	"Telephone Number":"661-1255"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 3",
+	"Location":"Pacdal Circle",
+	"Coordinates":"",
+	"Telephone Number":[
+		"300 - 9113",
+		"424 - 0670"
+	]
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 4",
+	"Location":"PEZA, Loakan",
+	"Coordinates":"",
+	"Telephone Number":[
+		"305 - 9114",
+		"424 - 0992"
+	]
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 5",
+	"Location":"Legarda, Marcos Highway",
+	"Coordinates":"",
+	"Telephone Number":[
+		"442 - 0629",
+		"300 - 9115"
+	]
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 6",
+	"Location":"Aurora Hill, Baguio City",
+	"Coordinates":"",
+	"Telephone Number":[
+		"300 - 9116",
+		"424 - 2174"
+	]
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 7",
+	"Location":"Central Business District",
+	"Coordinates":"",
+	"Telephone Number":"661 - 1489"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 8",
+	"Location":"Camp 7, Kennon Road",
+	"Coordinates":"",
+	"Telephone Number":"424 - 2681"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 9",
+	"Location":"Irisan",
+	"Coordinates":"",
+	"Telephone Number":"424-8834"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 10",
+	"Location":"Green Valley, Marcos Highway",
+	"Coordinates":"",
+	"Telephone Number":"422 - 2662"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Police Station 10",
+	"Location":"Green Valley, Marcos Highway",
+	"Coordinates":"",
+	"Telephone Number":"422 - 2662"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Traffic Unit, Police Station 10",
+	"Location":"Green Valley, Marcos Highway",
+	"Coordinates":"",
+	"Telephone Number":"422 - 9953"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Tourist Police Unit",
+	"Location":"Burnham Park",
+	"Coordinates":"",
+	"Telephone Number":"424 - 0718"
+}
+{
+	"Service Type":"Police Department",
+	"Specification":"Women and Children Protection Desk",
+	"Location":"Jose Abad Santos Drive",
+	"Coordinates":"",
+	"Telephone Number":"422 - 8600"
+}
+{
+	"Service Type":"Hospital Department",
+	"Specification":"",
+	"Location":"Baguio General Hospital",
+	"Coordinates":"",
+	"Telephone Number":[
+		"442-4216",
+		"169"
+	]
+}
+{
+	"Service Type":"Hospital Department",
+	"Specification":"E.R.",
+	"Location":"BGHMC",
+	"Coordinates":"",
+	"Telephone Number":[
+		"442-4216",
+		"169"
+	]
+}
