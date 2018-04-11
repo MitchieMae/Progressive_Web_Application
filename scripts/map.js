@@ -1,15 +1,23 @@
 var mapCanvas = document.getElementById("baguioMap");
 var mapCtx = mapCanvas.getContext("2d");
 
+//top-left : 16.436468, 120.544788
+//bottom-right : 16.361842, 120.631776
+
 //set size
 
 mapCanvas.height = document.body.clientHeight;
 mapCanvas.width = document.body.clientWidth;
 
 var mapBg = document.getElementById("mapSVG");
+var testItem = document.getElementById("testItem");
 
 mapBg.onload = function(){
     mapCtx.drawImage(mapBg,0,0);
+}
+
+testItem.onload = function(){
+    mapCtx.drawImage(testItem,0,0);
 }
 
 var mapTranslation = [0,0];
@@ -83,5 +91,6 @@ function draw(){
     mapCtx.translate(mapTranslation[0],mapTranslation[1]);
     mapCtx.scale(mapScale[0],mapScale[1]);
     mapCtx.drawImage(mapBg,0,0);
+    mapCtx.drawImage(testItem,0,0);
     mapCtx.restore();
 }
