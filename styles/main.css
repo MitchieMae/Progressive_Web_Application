@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: lightgray;
 }
 
 /*mobile first*/
@@ -35,33 +36,29 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
+    border-color: #000;
+    border-width: 1px;
 }
 
 #dropDown{
+    margin: 0;
+    padding: 0;
+    text-align: left;
     font-size: 5em;
-    background-color: antiquewhite;
-    width: 90%;
-    margin-top: 2vh;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1vh;
-    text-align: center;
+    background-color: white;
+    width: 100%;
     transition: all .4s ease;
-    padding: 
 }
 
 #dropDown_container .dropped{
-    border-radius: 1vh 1vh 0 0;
     box-shadow: 0px 3px 10px #727272;
     opacity: 0.99;
 }
 
 #dropDown_content{
     padding: 0;
-    margin: 0;
-    margin: 0 auto;
     width: 90%;
-    background-color: antiquewhite;
+    background-color: #f2f2f2;
     border-radius: 0 0 1vh 1vh;
     z-index: -10;
     transition: all .4s ease;
@@ -72,14 +69,14 @@ body{
 #dropDown_container .droppedContent{
     display: block;
     box-shadow: 0px 3px 10px #727272;
-    background-color: aqua;
+    background-color: #f2f2f2;
     height: 50vh;
     overflow: auto;
 }
 
 #dropDown_container .dropped input{
-    border-color: aqua;
-    background-color: aqua;
+    border-radius: 10px;
+    background-color: #f2f2f2;
 }
 
 #dropDown input{
@@ -89,15 +86,19 @@ body{
     border: none;
     background-color: transparent;
     height: inherit;
-    text-align: center;
     width: 90%;
 }
 
 #dropDown_content ul{
     list-style-type: none;
-    font-size: 4em;
+    font-size: 2em;
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
+}
+
+#dropDown_content li{
+    padding:5px;
 }
 
 #details{
