@@ -7,8 +7,9 @@ body{
 /*mobile first*/
 
 #mapCanvas{
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
 
 #misc{
