@@ -39,21 +39,59 @@
                 <img style = "overflow: visible;display: none; opacity: .5" id="testItem" src = "assets/pointer.svg">
                 <canvas id = "baguioMap"></canvas>
             </div>
+            <div id="dropDown_content">
+                <!--                    sample data -->
+                <ul>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                </ul>
+            </div>
+        </div>
 
-            <div id = "misc">
-                <div id = "mapControl">
-                        <button id="mapCtr_zoom-in"><i class="fas fa-plus"></i></button>
-                        <button id="mapCtr_zoom-out"><i class="fas fa-minus"></i></button>
-                </div>
+        <div id="mapCanvas">
+            <img style="overflow: visible;display: none" id="mapSVG" src="assets/baguiomap.svg">
+            <img style="overflow: visible;display: none" id="testItem" src="assets/Freesample.svg">
+            <canvas id="baguioMap"></canvas>
+        </div>
 
-                <div id = "details">
-                    <div id = "detailsContainter">
-                        <h1 id = "locationName">LOCATION</h1>
-                    </div>
+        <div id="misc">
+            <div id="mapControl">
+                <button id="mapCtr_zoom-in"><i class="fas fa-plus"></i></button>
+                <button id="mapCtr_zoom-out"><i class="fas fa-minus"></i></button>
+            </div>
+
+            <div id="details">
+                <div id="detailsContainter">
+                    <h1 id="locationName">LOCATION</h1>
                 </div>
             </div>
-            
-            
         </div>
-    </body>
+
+
+    </div>
+</body>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', {
+                scope: '/'
+            })
+         .then(function(registration) {
+                console.log("Service Worker registered", registration);
+            });
+    }
+</script>
+
 </html>
