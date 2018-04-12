@@ -1,59 +1,72 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-        <script async src="scripts/dropdown.js"></script>
-        <script async src="scripts/map.js"></script>
-        <script async src="scripts/misc.js"></script>
-    </head>
-    
-    <body>
-        <div id = "app">
-            <div id = "dropDown_container">
-                <div id = "dropDown">
-                    <input onclick="dropDown()" type="text" placeholder="Location"/>
-                </div>
-                <div id = "dropDown_content">
-<!--                    sample data -->
-                    <ul>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                        <li>Mines View</li>
-                        <li>Bakakeng</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div id = "mapCanvas">
-                <img style = "overflow: visible;display: none" id="mapSVG" src = "assets/baguiomap.svg">
-                <img style = "overflow: visible;display: none" id="testItem" src = "assets/Freesample.svg">
-                <canvas id = "baguioMap"></canvas>
-            </div>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <script async src="scripts/dropdown.js"></script>
+    <script async src="scripts/map.js"></script>
+    <script async src="scripts/misc.js"></script>
+</head>
 
-            <div id = "misc">
-                <div id = "mapControl">
-                        <button id="mapCtr_zoom-in"><i class="fas fa-plus"></i></button>
-                        <button id="mapCtr_zoom-out"><i class="fas fa-minus"></i></button>
-                </div>
-
-                <div id = "details">
-                    <div id = "detailsContainter">
-                        <h1 id = "locationName">LOCATION</h1>
-                    </div>
-                </div>
+<body>
+    <div id="app">
+        <div id="dropDown_container">
+            <div id="dropDown">
+                <input onclick="dropDown()" type="text" placeholder="Location" />
             </div>
-            
-            
+            <div id="dropDown_content">
+                <!--                    sample data -->
+                <ul>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                    <li>Mines View</li>
+                    <li>Bakakeng</li>
+                </ul>
+            </div>
         </div>
-    </body>
+
+        <div id="mapCanvas">
+            <img style="overflow: visible;display: none" id="mapSVG" src="assets/baguiomap.svg">
+            <img style="overflow: visible;display: none" id="testItem" src="assets/Freesample.svg">
+            <canvas id="baguioMap"></canvas>
+        </div>
+
+        <div id="misc">
+            <div id="mapControl">
+                <button id="mapCtr_zoom-in"><i class="fas fa-plus"></i></button>
+                <button id="mapCtr_zoom-out"><i class="fas fa-minus"></i></button>
+            </div>
+
+            <div id="details">
+                <div id="detailsContainter">
+                    <h1 id="locationName">LOCATION</h1>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', {
+                scope: '/'
+            })
+         .then(function(registration) {
+                console.log("Service Worker registered", registration);
+            });
+    }
+</script>
+
 </html>
