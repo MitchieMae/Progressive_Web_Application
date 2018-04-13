@@ -6,11 +6,11 @@ var mapCtx = mapCanvas.getContext("2d");
 
 var top_leftCoor = new Object();
 top_leftCoor.lat = 16.434924; //Y
-top_leftCoor.long = 120.545171; //X
+top_leftCoor.long = 120.547171; //X
 
 var bottom_rightCoor = new Object();
 bottom_rightCoor.lat = 16.360225;
-bottom_rightCoor.long = 120.632203;
+bottom_rightCoor.long = 120.633303;
 
 //set size
 
@@ -59,7 +59,7 @@ function plotOnMap(elem,lat, long){
 }
 
 function plotOnMap(elem,lat, long,width,height){
-    mapCtx.drawImage(elem,mapper_X.map(long),mapper_Y.map(lat),width,height);
+    mapCtx.drawImage(elem,mapper_X.map(long) - width/2, mapper_Y.map(lat) - height/2 ,width,height);
 }
 
 var mousePressed = false;
@@ -116,20 +116,17 @@ function draw(){
     mapCtx.translate(mapTranslation[0],mapTranslation[1]);
     mapCtx.scale(mapScale[0],mapScale[1]);
     mapCtx.drawImage(mapBg,0,0);
-    drawPolice();
+    drawStations(stations.police,"../assets/icons/police.png");
+    drawStations(stations.firedept,"../assets/icons/firefighter.png");
     mapCtx.restore();
 }
 
-function drawPolice(){
-    for(i = 0; i < stations.length; i++){
-        if(stations[i].ServiceType = "Police Department"){
-            var icon = new Image();
-            icon.height = 10;
-            icon.width = 10;
-            icon.src = "../assets/icons/police.png"
-            var lat = Number(stations[i].Coordinates.split(',')[0]);
-            var lon = Number(stations[i].Coordinates.split(',')[1]);
-            plotOnMap(icon,lat,lon,50 * 1/mapScale[0],50 * 1/mapScale[1]);
-        }
+function drawStations(dept,imgsrc){
+    for(i = 0; i < dept.length; i++){
+        var icon = new Image();
+        icon.src = imgsrc;
+        var lat = Number(dept[i].Coordinates.split(',')[0]);
+        var lon = Number(dept[i].Coordinates.split(',')[1]);
+        plotOnMap(icon,lat,lon,25 * 1/mapScale[0],25 * 1/mapScale[1]);
     }
 }
