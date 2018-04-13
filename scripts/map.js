@@ -5,11 +5,11 @@ var mapCtx = mapCanvas.getContext("2d");
 //bottom-right : 16.361842, 120.631776
 
 var top_leftCoor = new Object();
-top_leftCoor.lat = 16.436924; //Y
+top_leftCoor.lat = 16.434924; //Y
 top_leftCoor.long = 120.545171; //X
 
 var bottom_rightCoor = new Object();
-bottom_rightCoor.lat = 16.362325;
+bottom_rightCoor.lat = 16.360225;
 bottom_rightCoor.long = 120.632203;
 
 //set size
@@ -58,10 +58,8 @@ function plotOnMap(elem,lat, long){
     mapCtx.drawImage(elem,mapper_X.map(long),mapper_Y.map(lat));
 }
 
-testItem.onload = function(){
-    mapCtx.globalAlpha = 0.5;
-    plotOnMap(testItem,16.403839,120.605201);
-    mapCtx.globalAlpha = 1;
+function plotOnMap(elem,lat, long,width,height){
+    mapCtx.drawImage(elem,mapper_X.map(long),mapper_Y.map(lat),width,height);
 }
 
 var mousePressed = false;
@@ -118,8 +116,20 @@ function draw(){
     mapCtx.translate(mapTranslation[0],mapTranslation[1]);
     mapCtx.scale(mapScale[0],mapScale[1]);
     mapCtx.drawImage(mapBg,0,0);
-    mapCtx.globalAlpha = 0.5;
-    plotOnMap(testItem,16.403839,120.605201);
-    mapCtx.globalAlpha = 1;
+    drawPolice();
     mapCtx.restore();
+}
+
+function drawPolice(){
+    for(i = 0; i < stations.length; i++){
+        if(stations[i].ServiceType = "Police Department"){
+            var icon = new Image();
+            icon.height = 10;
+            icon.width = 10;
+            icon.src = "../assets/icons/police.png"
+            var lat = Number(stations[i].Coordinates.split(',')[0]);
+            var lon = Number(stations[i].Coordinates.split(',')[1]);
+            plotOnMap(icon,lat,lon,50 * 1/mapScale[0],50 * 1/mapScale[1]);
+        }
+    }
 }

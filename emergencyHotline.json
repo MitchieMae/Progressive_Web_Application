@@ -1,196 +1,199 @@
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 1",
-	"Location":"Quirino Highway",
-	"Coordinates":"16.4141816, 120.5922029",
-	"Number":"424-2697"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 2",
-	"Location":"Camdas",
-	"Coordinates":"16.4256189, 120.5937266",
-	"Number":"661-1255"
-}
-{
-	"Service Types":"Police Department",
-	"Specification":"Police Station 3",
-	"Location":"Pacdal Circle",
-	"Coordinates":"16.416694, 120.6155427",
-	"Number":[		
-		"300 - 9113",
-		"424 - 0670"
-	]
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 4",
-	"Location":"PEZA, Loakan",
-	"Coordinates":"",
-	"Number":[
-		"305 - 9114",
-		"424 - 0992"
-	]
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 5",
-	"Location":"Legarda, Marcos Highway",
-	"Coordinates":"16.4015648, 120.5935153",
-	"Number":[
-		"442 - 0629",
-		"300 - 9115"
-	]
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 6",
-	"Location":"Aurora Hill, Baguio City",
-	"Coordinates":"16.4262323, 120.6061571",
-	"Number":[
-		"300 - 9116",
-		"424 - 2174"
-	]
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 7",
-	"Location":"Central Business District",
-	"Coordinates":"16.4141299, 120.5922869",
-	"Number":"661 - 1489"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 8",
-	"Location":"Camp 7, Kennon Road",
-	"Coordinates":"16.4141299, 120.5922869",
-	"Number":"424 - 2681"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 8",
-	"Location":"Camp 7, Kennon Road",
-	"Coordinates":"16.3753156, 120.6071172",
-	"Number":"424 - 2681"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 9",
-	"Location":"Irisan",
-	"Coordinates":"16.4633602, 120.6220742",
-	"Number":"424-8834"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Police Station 10",
-	"Location":"Green Valley, Marcos Highway",
-	"Coordinates":"16.3916613, 120.5791508",
-	"Number":"422 - 2662"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Traffic Unit",
-	"Location":"Session Road",
-	"Coordinates":"16.4108309, 120.59912320000001",
-	"Number":"422 - 9953"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Tourist Police Unit",
-	"Location":"Burnham Park",
-	"Coordinates":"16.4112557, 120.5927389",
-	"Number":"424 - 0718"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Women and Children Protection Desk",
-	"Location":"Jose Abad Santos Drive",
-	"Coordinates":"16.4108978, 120.5970687",
-	"Number":"422 - 8600"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"PNP-CMP Dangwa",
-	"Location":"",
-	"Coordinates":"16.4656624, 120.59820630000002",
-	"Number":"442-5645"
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"NBI",
-	"Location":"",
-	"Coordinates":"16.4079617, 120.60041460000002",
-	"Number":[
-		"442-7203",
-		"442-7204"
-	]
-}
-{
-	"Service Type":"Police Department",
-	"Specification":"Highway Patrol",
-	"Location":"Military Cutoff Road, Baguio City, Benguet",
-	"Coordinates":"16.4038449, 120.60039529999995",
-	"Number":"442-4429"
-}
-{
-	"Service Type":"Hospital Department",
-	"Specification":"",
-	"Location":"Baguio General Hospital",
-	"Coordinates":"164023332, 120.5960071",
-	"Number":"442-4216"
-}
-{
-	"Service Type":"Hospital Department",
-	"Specification":"BGH STOP DEATH program",
-	"Location":"BGHMC",
-	"Coordinates":"16.4011116, 120.5956658",
-	"Number":[
-		"442-3765",
-		"443-5678"
-	]
-}
-{
-	"Service Type":"Hospital Department",
-	"Specification":"",
-	"Location":"SLU Sacred Heart Hospital",
-	"Coordinates":"16.4170058, 120.5976246",
-	"Number":["442-5701",
-		  "442-5702"
-	]
-}
-{
-	"Service Type":"Hospital Department",
-	"Specification":"",
-	"Location":"Baguio Medical Center",
-	"Coordinates":"16.4019617, 120.5975916",
-	"Number":[
-		"442-3338",
-		"442-2626"
-	]
-}
-{
-	"Service Type":"Hospital Department",
-	"Specification":"",
-	"Location":"Sto. Nino Hospital",
-	"Coordinates":"16.2662477, 120.6395414",
-	"Number":[
-		"442-7769",
-		"443-7770"
-}
-{
-	"Service Type":"Fire Department",
-	"Specification":"Irisan-Pucay Fire Sub Station",
-	"Location":"Irisan, Baguio City",
-	"Coordinates":"16.4191808, 120.5572988",
-	"Number":"442-4357"
-}
-{
-	"Service Type":"Fire Department",
-	"Specification":"",
-	"Location":"No. 1, Corner Abanao and Kayang Sts., Baguio City",
-	"Coordinates":"16.4147079, 120.5916459",
-	"Number":[
-		"442-2222",
-		"443-7089"
-	]
-}
+var stations = [
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 1",
+        "Location":"Quirino Highway",
+        "Coordinates":"16.4141816,120.5922029",
+        "Number":"424-2697"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 2",
+        "Location":"Camdas",
+        "Coordinates":"16.4256189,120.5937266",
+        "Number":"661-1255"
+    },
+    {
+        "ServicTypes":"Police Department",
+        "Specification":"Police Station 3",
+        "Location":"Pacdal Circle",
+        "Coordinates":"16.416694,120.6155427",
+        "Number":[		
+            "300 - 9113",
+            "424 - 0670"
+        ]
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 4",
+        "Location":"PEZA, Loakan",
+        "Coordinates":"",
+        "Number":[
+            "305 - 9114",
+            "424 - 0992"
+        ]
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 5",
+        "Location":"Legarda, Marcos Highway",
+        "Coordinates":"16.4015648,120.5935153",
+        "Number":[
+            "442 - 0629",
+            "300 - 9115"
+        ]
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 6",
+        "Location":"Aurora Hill, Baguio City",
+        "Coordinates":"16.4262323,120.6061571",
+        "Number":[
+            "300 - 9116",
+            "424 - 2174"
+        ]
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 7",
+        "Location":"Central Business District",
+        "Coordinates":"16.4141299,120.5922869",
+        "Number":"661 - 1489"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 8",
+        "Location":"Camp 7, Kennon Road",
+        "Coordinates":"16.4141299,120.5922869",
+        "Number":"424 - 2681"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 8",
+        "Location":"Camp 7, Kennon Road",
+        "Coordinates":"16.3753156,120.6071172",
+        "Number":"424 - 2681"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 9",
+        "Location":"Irisan",
+        "Coordinates":"16.4633602,120.6220742",
+        "Number":"424-8834"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Police Station 10",
+        "Location":"Green Valley, Marcos Highway",
+        "Coordinates":"16.3916613,120.5791508",
+        "Number":"422 - 2662"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Traffic Unit",
+        "Location":"Session Road",
+        "Coordinates":"16.4108309,120.59912320000001",
+        "Number":"422 - 9953"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Tourist Police Unit",
+        "Location":"Burnham Park",
+        "Coordinates":"16.4112557,120.5927389",
+        "Number":"424 - 0718"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Women and Children Protection Desk",
+        "Location":"Jose Abad Santos Drive",
+        "Coordinates":"16.4108978,120.5970687",
+        "Number":"422 - 8600"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"PNP-CMP Dangwa",
+        "Location":"",
+        "Coordinates":"16.4656624,120.59820630000002",
+        "Number":"442-5645"
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"NBI",
+        "Location":"",
+        "Coordinates":"16.4079617,120.60041460000002",
+        "Number":[
+            "442-7203",
+            "442-7204"
+        ]
+    },
+    {
+        "ServicType":"Police Department",
+        "Specification":"Highway Patrol",
+        "Location":"Military Cutoff Road, Baguio City, Benguet",
+        "Coordinates":"16.4038449,120.60039529999995",
+        "Number":"442-4429"
+    },
+    {
+        "ServicType":"Hospital Department",
+        "Specification":"",
+        "Location":"Baguio General Hospital",
+        "Coordinates":"164023332,120.5960071",
+        "Number":"442-4216"
+    },
+    {
+        "ServicType":"Hospital Department",
+        "Specification":"BGH STOP DEATH program",
+        "Location":"BGHMC",
+        "Coordinates":"16.4011116,120.5956658",
+        "Number":[
+            "442-3765",
+            "443-5678"
+        ]
+    },
+    {
+        "ServicType":"Hospital Department",
+        "Specification":"",
+        "Location":"SLU Sacred Heart Hospital",
+        "Coordinates":"16.4170058,120.5976246",
+        "Number":["442-5701",
+              "442-5702"
+        ]
+    },
+    {
+        "ServicType":"Hospital Department",
+        "Specification":"",
+        "Location":"Baguio Medical Center",
+        "Coordinates":"16.4019617,120.5975916",
+        "Number":[
+            "442-3338",
+            "442-2626"
+        ]
+    },
+    {
+        "ServicType":"Hospital Department",
+        "Specification":"",
+        "Location":"Sto. Nino Hospital",
+        "Coordinates":"16.2662477,120.6395414",
+        "Number":[
+            "442-7769",
+            "443-7770"
+        ]
+    },
+    {
+        "ServicType":"Fire Department",
+        "Specification":"Irisan-Pucay Fire Sub Station",
+        "Location":"Irisan, Baguio City",
+        "Coordinates":"16.4191808,120.5572988",
+        "Number":"442-4357"
+    },
+    {
+        "ServicType":"Fire Department",
+        "Specification":"",
+        "Location":"No. 1, Corner Abanao and Kayang Sts., Baguio City",
+        "Coordinates":"16.4147079,120.5916459",
+        "Number":[
+            "442-2222",
+            "443-7089"
+        ]
+    },
+]
