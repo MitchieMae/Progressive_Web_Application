@@ -66,7 +66,7 @@ body{
     width: 97%;
     background-color: #f2f2f2;
     border-radius: 0 0 1vh 1vh;
-    z-index: -10;
+    z-index: 10;
     transition: all .4s ease;
     overflow: hidden;
     max-height: 0;
@@ -119,16 +119,15 @@ body{
 
 #details{
     width: 100%;
-    background-color: transparent;
+    background-color: white;
     overflow: auto;
     transition: all .4s ease;
-    height: auto;
+    max-height: 40vh;
+    padding: 1vh;
 }
 
 #detailsContainer{
-    box-shadow: 0 -5px 5px -5px #333;
     background-color: white;
-    height: 20vh;
     width: 100%;
     font-family: sans-serif;
     margin: auto;
@@ -157,6 +156,7 @@ body{
     width: 100%;
     text-align: center;
     text-decoration: none;
+    font-size: 20px;
 }
 
 #numbers div:first-child i{
@@ -164,20 +164,38 @@ body{
     border: 1px solid #5050c3;
     border-radius: 50%;
     padding: 1vh;
+    transition: all .4s ease;
+}
+
+#numbers div:first-child i:hover {
+    background-color: #5050c3;
+    color: #ffffff;
 }
 
 #numbers div:nth-child(2) i{
-    color: #5050c3;
-    border: 1px solid #5050c3;
+    color: #1e693e;
+    border: 1px solid #1e693e;
     border-radius: 50%;
     padding: 1vh;
+    transition: all .4s ease;
+}
+
+#numbers div:nth-child(2) i:hover{
+    background-color: #1e693e;
+    color: #ffffff
 }
 
 #numbers div:nth-child(3) i {
-    color: #5050c3;
-    border: 1px solid #5050c3;
+    color: #d30d20;
+    border: 1px solid #d30d20;
     border-radius: 50%;
     padding: 1vh;
+    transition: all .4s ease;
+}
+
+#numbers div:nth-child(3) i:hover{
+    background-color: #d30d20;
+    color: #ffffff
 }
 
 #call-buttons {
@@ -196,7 +214,7 @@ body{
 
 @media only screen and (min-width: 768px) {
     #detailsContainer h1 {
-        font-size: 1.75em;
+        font-size: 3em;
     }
     
     #detailsContainer h2 {
@@ -206,7 +224,7 @@ body{
 
 @media only screen and (min-width: 1020px) {
     #dropDown {
-        font-size: 2em;
+        font-size: 3em;
         width: 30%;
         float: left;
         margin-left: 1vh;
