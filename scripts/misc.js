@@ -27,8 +27,9 @@ for(var i in places)(function(i){
         console.log(lat + "," + long);
         draw();
         locationName.textContent = places[i].Location;
-        policeDetails.textContent = closestStation.Number[0];
-        policeDetails.textContent = closestFireDept.Number[0];
+        policeDetails.textContent = "Police Station: " + closestStation.Number[0] + " | " + closestStation.Specification + " | " + closestStation.Location;
+        hospDetails.textContent = "Hospital: " + closestHospital.Number[0] + " | " + closestHospital.Location;
+        firedeptDetails.textContent = "Fire Department: " + closestFireDept.Number[0] + " | " + closestFireDept.Specification + " | " + closestFireDept.Location;
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;

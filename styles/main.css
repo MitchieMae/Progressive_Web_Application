@@ -132,8 +132,8 @@ body{
 }
 
 #detailsContainer h1{
-    padding: 1vh;
-    font-size: 3em;
+    padding: 0vh;
+    font-size: 2em;
     font-weight: normal;
 }
 
@@ -144,5 +144,36 @@ body{
 }
 
 #numbers {
-    display: block;
+    display: inline-block;
+}
+
+
+
+@media only screen and (min-width: 1020px) {
+    
+    #dropDown {
+        font-size: 2em;
+        width: 30%;
+        float: left;
+        margin-left: 1vh;
+    }
+    
+    #dropDown_content{
+        margin-left: 1vh;
+        float: left;
+        width: 30%;
+        clear: both;
+    }
+    
+    #dropDown_content li {
+        font-size: 0.5em;
+    }
+    
+    #detailsContainer h1{
+        font-size: 1.25em;
+    }
+    
+    #detailsContainer h2 {
+        font-size: 0.85em;
+    }
 }
