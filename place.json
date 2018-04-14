@@ -1,95 +1,97 @@
-{
-	"Location":"Burnham Park",
-	"Coordinates":"16.4093469, 120.59495790000005",
-	"Number":""
-}
-{
-	"Location":"Heritage and Nature Park",
-	"Coordinates":"16.4038641, 120.58663630000001",
-	"Number":"0926 788 9234"
-}
-{
-	"Location":"Our Lady of the Atonement Cathedral",
-	"Coordinates":"16.4125585, 120.59858929999996",
-	"Number":"(074) 304 4061"
-}
-{
-	"Location":"Pink Sisters",
-	"Coordinates":"16.4121482, 120.6042463",
-	"Number":""
-}
-{
-	"Location":"Baguio Museum",
-	"Coordinates":"16.4070224, 120.59845919999998",
-	"Number":"(063) 444 7451"
-}
-{
-	"Location":"LAPERAL",
-	"Coordinates":"16.4110897, 120.60472989999994",
-	"Number":""
-}
-{
-	"Location":"Rizal Park",
-	"Coordinates":"16.4128919, 120.59241500000007",
-	"Number":""
-}
-{
-	"Location":"University Of The Philippines Baguio - Museo Kordilyera",
-	"Coordinates":"16.4057496, 120.59774190000007",
-	"Number":""
-}
-{
-	"Location":"Our Lady of Lourdes Grotto",
-	"Coordinates":"16.4095958, 120.58057039999994",
-	"Number":""
-}
-{
-	"Location":"Cemetery of Negativism",
-	"Coordinates":"16.399435, 120.61699750000002",
-	"Number":""
-}
-{
-	"Location":"Wright Park",
-	"Coordinates":"16.4159061, 120.61670370000002",
-	"Number":""
-}
-{
-	"Location":"The Manor at Camp John Hay",
-	"Coordinates":"16.400591, 120.61762699999997",
-	"Number":"(074) 424 0931"
-}
-{
-	"Location":"Panagbenga Park",
-	"Coordinates":"16.4045802, 120.60643479999999",
-	"Number":""
-}
-{
-	"Location":"Tree Top Adventure Baguio",
-	"Coordinates":"16.399435, 120.61699750000002",
-	"Number":""
-}
-{
-	"Location":"Baguio Botanical Garden",
-	"Coordinates":"16.4144181, 120.61320279999995",
-	"Number":""
-}
-{
-	"Location":"Igorot Park",
-	"Coordinates":"16.4057544, 120.61681509999994",
-	"Number":""
-}
-{
-	"Location":"Maryknoll Ecological Sanctuary",
-	"Coordinates":"16.4013365, 120.5896497",
-	"Number":"(074) 424 5745"
-}
-{
-	"Location":"Baguio Orchidarium",
-	"Coordinates":"16.4108607, 120.59253669999998",
-	"Number":""
-}
-{
-	"Location":"SM City Baguio",
-	"Coordinates":"16.408723, 120.5992",
-	"Number":"(074) 619 7838"
-}
+var places = [ 
+    {
+        "Location":"Burnham Park",
+        "Coordinates":"16.4093469, 120.59495790000005",
+        "Number":""
+    },
+    {
+        "Location":"Heritage and Nature Park",
+        "Coordinates":"16.4038641, 120.58663630000001",
+        "Number":"0926 788 9234"
+    },
+    {
+        "Location":"Our Lady of the Atonement Cathedral",
+        "Coordinates":"16.4125585, 120.59858929999996",
+        "Number":"(074) 304 4061"
+    },
+    {
+        "Location":"Pink Sisters",
+        "Coordinates":"16.4121482, 120.6042463",
+        "Number":""
+    },
+    {
+        "Location":"Baguio Museum",
+        "Coordinates":"16.4070224, 120.59845919999998",
+        "Number":"(063) 444 7451"
+    },
+    {
+        "Location":"LAPERAL",
+        "Coordinates":"16.4110897, 120.60472989999994",
+        "Number":""
+    },
+    {
+        "Location":"Rizal Park",
+        "Coordinates":"16.4128919, 120.59241500000007",
+        "Number":""
+    },
+    {
+        "Location":"University Of The Philippines Baguio - Museo Kordilyera",
+        "Coordinates":"16.4057496, 120.59774190000007",
+        "Number":""
+    },
+    {
+        "Location":"Our Lady of Lourdes Grotto",
+        "Coordinates":"16.4095958, 120.58057039999994",
+        "Number":""
+    },
+    {
+        "Location":"Cemetery of Negativism",
+        "Coordinates":"16.399435, 120.61699750000002",
+        "Number":""
+    },
+    {
+        "Location":"Wright Park",
+        "Coordinates":"16.4159061, 120.61670370000002",
+        "Number":""
+    },
+    {
+        "Location":"The Manor at Camp John Hay",
+        "Coordinates":"16.400591, 120.61762699999997",
+        "Number":"(074) 424 0931"
+    },
+    {
+        "Location":"Panagbenga Park",
+        "Coordinates":"16.4045802, 120.60643479999999",
+        "Number":""
+    },
+    {
+        "Location":"Tree Top Adventure Baguio",
+        "Coordinates":"16.399435, 120.61699750000002",
+        "Number":""
+    },
+    {
+        "Location":"Baguio Botanical Garden",
+        "Coordinates":"16.4144181, 120.61320279999995",
+        "Number":""
+    },
+    {
+        "Location":"Igorot Park",
+        "Coordinates":"16.4057544, 120.61681509999994",
+        "Number":""
+    },
+    {
+        "Location":"Maryknoll Ecological Sanctuary",
+        "Coordinates":"16.4013365, 120.5896497",
+        "Number":"(074) 424 5745"
+    },
+    {
+        "Location":"Baguio Orchidarium",
+        "Coordinates":"16.4108607, 120.59253669999998",
+        "Number":""
+    },
+    {
+        "Location":"SM City Baguio",
+        "Coordinates":"16.408723, 120.5992",
+        "Number":"(074) 619 7838"
+    }
+]

@@ -1,8 +1,7 @@
-function dropDown() {
-    var dd_content = document.getElementById("dropDown_content");
-    var dropDownBtn = document.getElementById("dropDown");
+var dd_content = document.getElementById("dropDown_content");
+var dropDownBtn = document.getElementById("dropDown");
 
-    var disp = dd_content.style.display;
+function dropDown() {
     
     if (dd_content.showing){
         

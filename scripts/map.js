@@ -156,7 +156,7 @@ function draw() {
     drawStations(stations.police,"../assets/icons/police.png");
     drawStations(stations.firedept,"../assets/icons/firefighter.png");
     drawStations(stations.hospital,"../assets/icons/hosp.png");
-    mapCtx.drawImage(pointer,pointer.posX - 25, pointer.posY - 25 ,50 * 1/mapScale[0],50 * 1/mapScale[1]);
+    mapCtx.drawImage(pointer,pointer.posX - 25, pointer.posY - 25 ,50,50);
     mapCtx.restore();
 }
 
@@ -166,8 +166,7 @@ function drawStations(dept,imgsrc){
         icon.src = imgsrc;
         var lat = Number(dept[i].Coordinates.split(',')[0]);
         var lon = Number(dept[i].Coordinates.split(',')[1]);
-        plotOnMap(icon,lat,lon,25 * 1/mapScale[0],25 * 1/mapScale[1]);
-
+        plotOnMap(icon,lat,lon,25,25);
     }
 
 }
@@ -178,8 +177,10 @@ pointer.posX = 0;
 pointer.posY = 0;
 
 function drawPointer(x , y){
-    pointer.posX = x - mapTranslation[0];
-    pointer.posY = y - mapTranslation[1];
+    pointer.posX = (x - mapTranslation[0])/mapScale[0];
+    pointer.posY = (y - mapTranslation[1])/mapScale[1];
     draw();
 }
+
+draw();
 
