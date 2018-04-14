@@ -89,6 +89,7 @@ body{
     height: inherit;
     width: 95%;
     outline: none;
+    border: none;
 }
 
 #dropDown input:focus {
@@ -101,10 +102,17 @@ body{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    cursor: pointer;
 }
 
 #dropDown_content li{
-    padding:5px;
+    transition: all 0.2s ease-out;
+    padding: 1.25rem;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+#dropDown_content li:hover {
+    background-color: #e5e4e4;
 }
 
 #details{

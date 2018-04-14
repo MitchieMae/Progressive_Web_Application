@@ -5,14 +5,14 @@ var stations = {
             "Specification":"Police Station 1",
             "Location":"Quirino Highway",
             "Coordinates":"16.4141816,120.5922029",
-            "Number":"424-2697"
+            "Number":["424-2697"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Police Station 2",
             "Location":"Camdas",
             "Coordinates":"16.4256189,120.5937266",
-            "Number":"661-1255"
+            "Number": ["661-1255"]
         },
         {
             "ServicTypes":"Police Department",
@@ -59,63 +59,63 @@ var stations = {
             "Specification":"Police Station 7",
             "Location":"Central Business District",
             "Coordinates":"16.4141299,120.5922869",
-            "Number":"661 - 1489"
+            "Number":["661 - 1489"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Police Station 8",
             "Location":"Camp 7, Kennon Road",
             "Coordinates":"16.4141299,120.5922869",
-            "Number":"424 - 2681"
+            "Number":["424 - 2681"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Police Station 8",
             "Location":"Camp 7, Kennon Road",
             "Coordinates":"16.3753156,120.6071172",
-            "Number":"424 - 2681"
+            "Number":["424 - 2681"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Police Station 9",
             "Location":"Irisan",
             "Coordinates":"16.4633602,120.6220742",
-            "Number":"424-8834"
+            "Number":["424-8834"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Police Station 10",
             "Location":"Green Valley, Marcos Highway",
             "Coordinates":"16.3916613,120.5791508",
-            "Number":"422 - 2662"
+            "Number":["422 - 2662"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Traffic Unit",
             "Location":"Session Road",
             "Coordinates":"16.4108309,120.59912320000001",
-            "Number":"422 - 9953"
+            "Number":["422 - 9953"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Tourist Police Unit",
             "Location":"Burnham Park",
             "Coordinates":"16.4112557,120.5927389",
-            "Number":"424 - 0718"
+            "Number":["424 - 0718"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"Women and Children Protection Desk",
             "Location":"Jose Abad Santos Drive",
             "Coordinates":"16.4108978,120.5970687",
-            "Number":"422 - 8600"
+            "Number":["422 - 8600"]
         },
         {
             "ServicType":"Police Department",
             "Specification":"PNP-CMP Dangwa",
             "Location":"",
             "Coordinates":"16.4656624,120.59820630000002",
-            "Number":"442-5645"
+            "Number":["442-5645"]
         },
         {
             "ServicType":"Police Department",
@@ -132,7 +132,7 @@ var stations = {
             "Specification":"Highway Patrol",
             "Location":"Military Cutoff Road, Baguio City, Benguet",
             "Coordinates":"16.4038449,120.60039529999995",
-            "Number":"442-4429"
+            "Number":["442-4429"]
         }
     ],
     "hospital" : [
@@ -141,7 +141,7 @@ var stations = {
             "Specification":"",
             "Location":"Baguio General Hospital",
             "Coordinates":"164023332,120.5960071",
-            "Number":"442-4216"
+            "Number":["442-4216"]
         },
         {
             "ServicType":"Hospital Department",
@@ -191,7 +191,7 @@ var stations = {
             "Specification":"Irisan-Pucay Fire Sub Station",
             "Location":"Irisan, Baguio City",
             "Coordinates":"16.4191808,120.5572988",
-            "Number":"442-4357"
+            "Number":["442-4357"]
         },
         {
             "ServicType":"Fire Department",

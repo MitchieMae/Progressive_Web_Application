@@ -8,6 +8,9 @@ function RangeMap(srcMin,srcMax,destMin,destMax){
 }
 //populate places list
 var list = document.getElementById("place-list");
+var locationName = document.getElementById("location-name");
+var stationDetails = document.getElementById("station-details");
+var closestStation = stations.police[0];
 
 for(var i in places)(function(i){
     var item = document.createElement('li');
@@ -19,6 +22,8 @@ for(var i in places)(function(i){
         pointer.posY = mapper_Y.map(lat) - 25;
         console.log(lat + "," + long);
         draw();
+        locationName.textContent = places[i].Location;
+        stationDetails.textContent = closestStation.Number;
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;
