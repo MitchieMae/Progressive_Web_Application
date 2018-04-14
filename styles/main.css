@@ -85,9 +85,13 @@ body{
     padding: 1vh;
     margin: 1vh;
     font-size: .5em;
-    border: 1px;
     height: inherit;
-    width: 91%;
+    width: 95%;
+    outline: none;
+}
+
+#dropDown input:focus {
+    outline: none;
 }
 
 #dropDown_content ul{
@@ -103,36 +107,29 @@ body{
 }
 
 #details{
-    height: 0vh;
     width: 100%;
-    background-color: #b65454;
+    background-color: transparent;
     overflow: hidden;
+    transition: all .4s ease;
 }
 
 #detailsContainer{
-    width: 98%;
+    box-shadow: 0 -5px 5px -5px #333;
+    background-color: white;
+    height: 20vh;
+    width: 100%;
     font-family: sans-serif;
     margin: auto;
 }
 
 #detailsContainer h1{
-    
+    padding: 1vh;
+    font-size: 3em;
+    font-weight: normal;
 }
 
-#callButton{
-    bottom: 0;
-    background-color: greenyellow;
-    margin: auto;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-}
-
-#callButton p{
-    margin: auto;
-    height: auto;
-    width: auto;
-    text-align: center;
-    font-size: 45px;
-    color: white;
+#detailsContainer h2 {
+    margin-left: 4vh;
+    font-size: 2em;
+    font-weight: normal;
 }
