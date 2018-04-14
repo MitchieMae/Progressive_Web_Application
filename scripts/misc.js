@@ -30,8 +30,8 @@ for(var i in places)(function(i){
         pointer.posY = mapper_Y.map(lat) - 25;
         draw();
         locationName.textContent = places[i].Location;
+        searchClosestStations(lat,long);
         policeDetails.textContent = closestStation.Number[0];
-        policeDetails.textContent = closestFireDept.Number[0];
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;
@@ -60,5 +60,47 @@ function search(){
 
 function searchClosestStations(lat,long){
     
+    var min = 99999;
+    var statLat, statLong = 0;
+    var dist = 0;
+    
+    for(var i in stations.police){
+        statLat = Number(stations.police[i].Coordinates.split(',')[0]);
+        statLong = Number(stations.police[i].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat) + (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestStation = stations.police[i];
+        }
+    }
+    
+    console.log(closestStation);
+    
+    min = 9999;
+    
+    for(var j in stations.firedept){
+        statLat = Number(stations.firedept[j].Coordinates.split(',')[0]);
+        statLong = Number(stations.firedept[j].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat)+ (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestFireDept = stations.firedept[j];
+        }
+    }
+    
+    min = 9999;
+    
+    for(var k in stations.hospital){
+        statLat = Number(stations.hospital[k].Coordinates.split(',')[0]);
+        statLong = Number(stations.hospital[k].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat)+ (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestHospital = stations.hospital[k];
+        }
+    }
 }
 
