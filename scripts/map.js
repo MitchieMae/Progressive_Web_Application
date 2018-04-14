@@ -30,7 +30,7 @@ mapBg.height = mapCanvas.height;
 var testItem = document.getElementById("testItem");
 
 mapBg.onload = function () {
-    mapCtx.drawImage(mapBg, 0, 0);
+    draw();
 }
 
 var mapTranslation = [0, 0];
@@ -38,6 +38,19 @@ var mapScale = [1, 1];
 var mousePressed, touchPressed = false;
 var prevCursPos_X, prevCursPos_Y, prevTouchPos_X, prevTouchPos_Y = undefined;
 var mousedown_time, mouseelapsed;
+
+var pointer = new Image();
+pointer.src = "../assets/icons/pointer.png";
+pointer.posX = 0;
+pointer.posY = 0;
+
+var mapper_X = new RangeMap(top_leftCoor.long, bottom_rightCoor.long,
+    0, mapBg.width);
+var mapper_Y = new RangeMap(top_leftCoor.lat, bottom_rightCoor.lat,
+    0, mapBg.height);
+
+var invMapper_X = new RangeMap(0,mapBg.width,top_leftCoor.long, bottom_rightCoor.long);
+var invMapper_Y = new RangeMap(0,mapBg.height,top_leftCoor.lat, bottom_rightCoor.lat);
 
 mapCanvas.addEventListener("mousemove", moveMap);
 mapCanvas.addEventListener("mousedown", mouseDown);
@@ -48,9 +61,14 @@ mapCanvas.addEventListener("touchend", touchRelease);
 mapCanvas.addEventListener("click",function(e){
     if(mouseelapsed < 500){
         drawPointer(e.clientX,e.clientY);
+        var canLat = invMapper_Y.map(e.clientY);
+        var canLong = invMapper_X.map(e.clientX);
+        
+        searchClosestStations(canLat,canLong);
+        locationName.textContent = canLat.toFixed(6) + ", " + canLong.toFixed(6);
+        displayDetails();
     }
 });
-
 
 ///mapcontrols
 var zoomInBtn = document.getElementById("mapCtr_zoom-in");
@@ -58,11 +76,6 @@ var zoomOutBtn = document.getElementById("mapCtr_zoom-out");
 
 zoomInBtn.addEventListener("click", zoomIn);
 zoomOutBtn.addEventListener("click", zoomOut);
-
-var mapper_X = new RangeMap(top_leftCoor.long, bottom_rightCoor.long,
-    0, mapBg.width);
-var mapper_Y = new RangeMap(top_leftCoor.lat, bottom_rightCoor.lat,
-    0, mapBg.height);
 
 function plotOnMap(elem, lat, long) {
     mapCtx.drawImage(elem, mapper_X.map(long), mapper_Y.map(lat));
@@ -171,16 +184,10 @@ function drawStations(dept,imgsrc){
 
 }
 
-var pointer = new Image();
-pointer.src = "../assets/icons/pointer.png";
-pointer.posX = 0;
-pointer.posY = 0;
-
 function drawPointer(x , y){
     pointer.posX = (x - mapTranslation[0])/mapScale[0];
     pointer.posY = (y - mapTranslation[1])/mapScale[1];
     draw();
 }
 
-draw();
 

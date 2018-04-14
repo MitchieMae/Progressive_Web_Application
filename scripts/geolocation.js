@@ -7,6 +7,9 @@ if ("geolocation" in navigator) {
         
         inputBox.placeholder = "Location : " + userLat + ", " + userLong;
         
+        locationName.textContent = userLat.toFixed(6) + ", " + userLong.toFixed(6);
+        displayDetails();
+        
     });
 } else {
     console.log("Geolocation not available");
