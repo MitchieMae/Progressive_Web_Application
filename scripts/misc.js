@@ -12,6 +12,13 @@ var inputBox = document.getElementById("searchBox");
 inputBox.addEventListener('keydown',search);
 
 //populate places list
+var locationName = document.getElementById("location-name");
+var policeDetails = document.getElementById("police-details");
+var hospDetails = document.getElementById("hospital-details");
+var firedeptDetails = document.getElementById("firedept-details");
+var closestStation = stations.police[0];
+var closestHospital = stations.hospital[0];
+var closestFireDept = stations.firedept[0];
 
 for(var i in places)(function(i){
     var item = document.createElement('li');
@@ -22,6 +29,9 @@ for(var i in places)(function(i){
         pointer.posX = mapper_X.map(long) - 25;
         pointer.posY = mapper_Y.map(lat) - 25;
         draw();
+        locationName.textContent = places[i].Location;
+        policeDetails.textContent = closestStation.Number[0];
+        policeDetails.textContent = closestFireDept.Number[0];
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;

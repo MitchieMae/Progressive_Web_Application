@@ -86,9 +86,14 @@ body{
     padding: 1vh;
     margin: 1vh;
     font-size: .5em;
-    border: 1px;
     height: inherit;
-    width: 91%;
+    width: 95%;
+    outline: none;
+    border: none;
+}
+
+#dropDown input:focus {
+    outline: none;
 }
 
 #dropDown_content ul{
@@ -97,43 +102,47 @@ body{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    cursor: pointer;
 }
 
 #dropDown_content li{
-    padding:5px;
+    transition: all 0.2s ease-out;
+    padding: 1.25rem;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+#dropDown_content li:hover {
+    background-color: #e5e4e4;
 }
 
 #details{
-    height: 0vh;
     width: 100%;
-    background-color: #b65454;
+    background-color: transparent;
     overflow: hidden;
+    transition: all .4s ease;
 }
 
 #detailsContainer{
-    width: 98%;
+    box-shadow: 0 -5px 5px -5px #333;
+    background-color: white;
+    height: 20vh;
+    width: 100%;
     font-family: sans-serif;
     margin: auto;
 }
 
 #detailsContainer h1{
-    
+    padding: 1vh;
+    font-size: 3em;
+    font-weight: normal;
 }
 
-#callButton{
-    bottom: 0;
-    background-color: greenyellow;
-    margin: auto;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
+#detailsContainer h2 {
+    margin-left: 4vh;
+    font-size: 1.25em;
+    font-weight: normal;
 }
 
-#callButton p{
-    margin: auto;
-    height: auto;
-    width: auto;
-    text-align: center;
-    font-size: 45px;
-    color: white;
+#numbers {
+    display: block;
 }
