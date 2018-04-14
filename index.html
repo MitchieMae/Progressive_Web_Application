@@ -7,13 +7,14 @@
         <script async src="scripts/dropdown.js"></script>
         <script async src="scripts/misc.js"></script>
         <script async src="scripts/map.js"></script>
+        <script async src="scripts/geolocation.js"></script>
     </head>
     
     <body>
         <div id = "app">
             <div id = "dropDown_container">
                 <div id = "dropDown">
-                    <input onclick="dropDown()" type="text" placeholder="Find a Location"/>
+                    <input id = "searchBox" onclick="dropDown()" type="text" />
                 </div>
                 <div id = "dropDown_content">
                     <ul id = "place-list">
@@ -40,6 +41,9 @@
                         <h2 id="police-details"></h2>
                         <h2 id="hospital-details"></h2>
                         <h2 id="firedept-details"></h2>
+                    </div>
+                    <div id="">
+                        <a>CALL</a>
                     </div>
                 </div>
             </div>

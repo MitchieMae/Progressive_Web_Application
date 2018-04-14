@@ -6,8 +6,12 @@ function RangeMap(srcMin,srcMax,destMin,destMax){
     }
     
 }
-//populate places list
+
 var list = document.getElementById("place-list");
+var inputBox = document.getElementById("searchBox");
+inputBox.addEventListener('keydown',search);
+
+//populate places list
 var locationName = document.getElementById("location-name");
 var policeDetails = document.getElementById("police-details");
 var hospDetails = document.getElementById("hospital-details");
@@ -24,16 +28,84 @@ for(var i in places)(function(i){
         var long = Number(places[i].Coordinates.split(',')[1]);
         pointer.posX = mapper_X.map(long) - 25;
         pointer.posY = mapper_Y.map(lat) - 25;
-        console.log(lat + "," + long);
         draw();
         locationName.textContent = places[i].Location;
-        policeDetails.textContent = "Police Station: " + closestStation.Number[0] + " | " + closestStation.Specification + " | " + closestStation.Location;
-        hospDetails.textContent = "Hospital: " + closestHospital.Number[0] + " | " + closestHospital.Location;
-        firedeptDetails.textContent = "Fire Department: " + closestFireDept.Number[0] + " | " + closestFireDept.Specification + " | " + closestFireDept.Location;
+        searchClosestStations(lat,long);
+        displayDetails();
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;
+        inputBox.value = places[i].Location;
+        searchClosestStations(lat,long);
     });
-    list.appendChild(item);    
+    list.appendChild(item);
+//    console.log(item.innerHTML);
 })(i);
 
+var listChild = list.querySelectorAll('li');
+
+function search(){
+    
+    var searchitem = inputBox.value;
+
+    for(var i in listChild){
+        if(listChild[i].textContent.toLowerCase().indexOf(searchitem.toLowerCase()) >= 0){
+            listChild[i].style.display = 'block';
+        }else{
+            listChild[i].style.display = 'none';
+        }
+    }
+        
+}
+
+function searchClosestStations(lat,long){
+    
+    var min = 99999;
+    var statLat, statLong = 0;
+    var dist = 0;
+    
+    for(var i in stations.police){
+        statLat = Number(stations.police[i].Coordinates.split(',')[0]);
+        statLong = Number(stations.police[i].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat) + (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestStation = stations.police[i];
+        }
+    }
+    
+    console.log(closestStation);
+    
+    min = 9999;
+    
+    for(var j in stations.firedept){
+        statLat = Number(stations.firedept[j].Coordinates.split(',')[0]);
+        statLong = Number(stations.firedept[j].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat)+ (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestFireDept = stations.firedept[j];
+        }
+    }
+    
+    min = 9999;
+    
+    for(var k in stations.hospital){
+        statLat = Number(stations.hospital[k].Coordinates.split(',')[0]);
+        statLong = Number(stations.hospital[k].Coordinates.split(',')[1]);
+        dist = (statLat - lat) * (statLat - lat)+ (statLong - long) * (statLong - long);
+        
+        if(dist < min){
+            min = dist;
+            closestHospital = stations.hospital[k];
+        }
+    }
+}
+
+function displayDetails() {
+        policeDetails.textContent = "Police Station: " + closestStation.Number[0] + " | " + closestStation.Specification + " | " + closestStation.Location;
+        hospDetails.textContent = "Hospital: " + closestHospital.Number[0] + " | " + closestHospital.Location;
+        firedeptDetails.textContent = "Fire Department: " + closestFireDept.Number[0] + " | " + closestFireDept.Specification + " | " + closestFireDept.Location;
+}
