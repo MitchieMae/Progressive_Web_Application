@@ -139,6 +139,10 @@ body{
 
 #detailsContainer h2 {
     margin-left: 4vh;
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: normal;
+}
+
+#numbers {
+    display: block;
 }

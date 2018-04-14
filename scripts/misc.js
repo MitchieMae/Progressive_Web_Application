@@ -9,8 +9,12 @@ function RangeMap(srcMin,srcMax,destMin,destMax){
 //populate places list
 var list = document.getElementById("place-list");
 var locationName = document.getElementById("location-name");
-var stationDetails = document.getElementById("station-details");
+var policeDetails = document.getElementById("police-details");
+var hospDetails = document.getElementById("hospital-details");
+var firedeptDetails = document.getElementById("firedept-details");
 var closestStation = stations.police[0];
+var closestHospital = stations.hospital[0];
+var closestFireDept = stations.firedept[0];
 
 for(var i in places)(function(i){
     var item = document.createElement('li');
@@ -23,7 +27,8 @@ for(var i in places)(function(i){
         console.log(lat + "," + long);
         draw();
         locationName.textContent = places[i].Location;
-        stationDetails.textContent = closestStation.Number;
+        policeDetails.textContent = closestStation.Number[0];
+        policeDetails.textContent = closestFireDept.Number[0];
         dd_content.classList.remove("droppedContent");
         dropDownBtn.classList.remove("dropped");
         dd_content.showing = false;
