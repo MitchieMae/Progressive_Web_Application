@@ -19,6 +19,7 @@ var firedeptDetails = document.getElementById("firedept-details");
 var closestStation = stations.police[0];
 var closestHospital = stations.hospital[0];
 var closestFireDept = stations.firedept[0];
+var callBtns = document.getElementsByClassName("callBtn");
 
 for(var i in places)(function(i){
     var item = document.createElement('li');
@@ -104,8 +105,14 @@ function searchClosestStations(lat,long){
     }
 }
 
+
 function displayDetails() {
         policeDetails.textContent = "Police Station: " + closestStation.Number[0] + " | " + closestStation.Specification + " | " + closestStation.Location;
         hospDetails.textContent = "Hospital: " + closestHospital.Number[0] + " | " + closestHospital.Location;
         firedeptDetails.textContent = "Fire Department: " + closestFireDept.Number[0] + " | " + closestFireDept.Specification + " | " + closestFireDept.Location;
+    
+        callBtns[0].href = "tel:" + closestStation.Number[0];
+        callBtns[1].href = "tel:" + closestHospital.Number[0];
+        callBtns[2].href = "tel:" + closestFireDept.Number[0];
+    
 }
